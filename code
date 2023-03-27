@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+// Выражение максимальное
+int main()
+{
+	unsigned long long a, b, c;
+
+	cin >> a;
+	cin >> b;
+	cin >> c;
+
+	if (a < 0 || b < 0 || c < 0)
+	{
+		return 0;
+	}
+
+	int s1,s2,s3,s4,s5,s6;
+
+	s1 = a + b + c;
+	s2 = a + b * c;
+	s3 = a * b + c;
+	s4 = (a + b) * c;
+	s5 = a * (b + c);
+	s6 = a * b * c;
+	
+	int arr[6] = { s1,s2,s3,s4,s5,s6 };
+
+	int k=arr[1];
+	for (int i = 0; i < sizeof(arr) / sizeof(arr[1]); i++)
+	{
+		if (k < arr[i])
+		{
+			k = arr[i];
+		}
+	}
+	cout << k<<endl;
+	system("pause");
+}
