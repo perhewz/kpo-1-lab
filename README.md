@@ -1,2 +1,2 @@
 # kpo-1-lab
-test conf 74
+test conf 445
